@@ -9,8 +9,9 @@ import Budget from './components/Budget';
 import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
-import ExpenseItem from './components/ExpenseItem';
+//import ExpenseItem from './components/ExpenseItem';
 import AllocationForm from './components/AllocationForm';
+import CurrencyChange from './components/CurrencyChange';
 
 import { AppProvider } from './context/AppContext';
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
+                    <div>
                     <div className='row mt-3'>
                         {/* Add Budget component here under */                
                             // Budget component
@@ -35,26 +37,31 @@ const App = () => {
                                              //ExpenseTotal component
                     <div className='col-sm'>
                     <ExpenseTotal />
-                </div>}        
+                </div>} 
+                {<div className='col-sm'>
+                        <CurrencyChange />
+                    </div> }</div>      
                        
                         {/* Add ExpenseList component here under */
                        //Remaining component
                        <div className='col-sm'>
                        <ExpenseList />
-                       </div>}         
+                    </div>}         
 
                         {/* Add ExpenseItem component here under */
                        //Remaining component
-                       <div className='col-sm'>
+                       /*<div className='col-sm'>
                        <ExpenseItem />
-                       </div>}        
-
+                    </div>*/}
+                         
+                       <h2 className='mt-9'>Change Allocation</h2>
                         {/* Add AllocationForm component here under */
-                           //Remaining component
-                           <div className='col-sm'>
+                           //Remaining component 
+                          <div className='col-sm'>
                            <AllocationForm />
-                           </div>}        
-
+                           </div>
+                        }   
+                          
                 </div>
             </div>
         </AppProvider>
